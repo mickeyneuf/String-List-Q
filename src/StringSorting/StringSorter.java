@@ -57,6 +57,9 @@ public class StringSorter {
 	/*
 	 * Implementation of the partition part of QuickSort
 	 * Handles the event of a tie, deciding that reverse alphabetical order is used if strings are the same length
+	 * Does not take capitalization into account. If two strings are the same after running toLowerCase() on both of them,
+	 * this algorithm will not do anything specific to sort them. They will show up in whatever order, but they will be
+	 * next to each other. Does not guarantee most capitalized first/first string with a capitalized letter, etc.
 	 */
 	private int partition(List<String> list, int low, int high) {
 		String pivot = list.get(high);
